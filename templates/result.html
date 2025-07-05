@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🔐 Security Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container result-box">
+        <h1 class="animated-text">📊 Analysis Report</h1>
+
+        <div class="result-item"><strong>👤 Instagram Username:</strong> {{ username }}</div>
+        <div class="result-item"><strong>📧 Email:</strong> {{ email }}</div>
+        <div class="result-item"><strong>📉 Breaches Found:</strong> {{ breach_count }}</div>
+        <div class="result-item"><strong>🔐 2FA Suggestion:</strong> {{ twofa }}</div>
+        <div class="result-item"><strong>🧬 Bio Status:</strong> {{ bio_status }}</div>
+        <div class="result-item"><strong>🛡️ Is Account Secure?</strong> {{ is_secure }}</div>
+
+        <br>
+        <a href="/" class="btn">🔁 Analyze Another</a>
+    </div>
+</body>
+</html>

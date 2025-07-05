@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🔐 Social Media Security Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-text">🔍 Analyze Your Social Media Security</h1>
+        <form action="/analyze" method="POST">
+            <label for="instagram">📸 Instagram Profile URL:</label><br>
+            <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/username/" required><br><br>
+
+            <label for="email">📧 Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email..." required><br><br>
+
+            <button type="submit" class="btn">Analyze 🔎</button>
+        </form>
+    </div>
+</body>
+</html>

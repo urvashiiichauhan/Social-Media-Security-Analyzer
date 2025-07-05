@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.animated-text {
+    font-size: 2em;
+    animation: pulse 2s infinite;
+    margin-bottom: 25px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); color: #fffc; }
+    50% { transform: scale(1.05); color: #fff; }
+    100% { transform: scale(1); color: #fffc; }
+}
+
+input[type="url"], input[type="email"] {
+    padding: 12px;
+    width: 90%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.btn {
+    background-color: #00c9a7;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #007f6b;
+}
+
+.result-box {
+    text-align: left;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.1em;
+}

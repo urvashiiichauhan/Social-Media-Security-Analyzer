@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analysis History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="result-container">
+    <h1>Saved Analysis History</h1>
+    <a href="/">🏠 Home</a>
+    <hr />
+    {% if analyses %}
+      {% for result in analyses %}
+        <div style="margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 15px;">
+          <p><strong>Username:</strong> {{ result.username }}</p>
+          <p><strong>Profile URL:</strong> <a href="{{ result.instagram_url }}" target="_blank">{{ result.instagram_url }}</a></p>
+          <p><strong>Email:</strong> {{ result.email }}</p>
+          <p><strong>Breach Count:</strong> {{ result.breach_count }}</p>
+          <p><strong>Bio Status:</strong> {{ result.bio_status }}</p>
+          <p><strong>Account Secure:</strong> {{ result.is_secure }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No saved analysis data found.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
